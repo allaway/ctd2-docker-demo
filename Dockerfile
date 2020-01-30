@@ -3,7 +3,7 @@ FROM rocker/r-base@sha256:ec224c21eff00e6cd8016419fae2886596c76e80fb1ae042e657b3
 
 
 #install reps
-RUN R -e "install.packages(c('tidyverse'), dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c('readr', 'dplyr'), dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 # run.sh defines run variables, if needed (not in this example) and tells the container 
 # what file to run
@@ -11,6 +11,7 @@ COPY run.sh /run.sh
 
 # Required: a model file. 
 COPY model.R /usr/local/bin/model.R
+COPY template.csv /template.csv
 
 # Make model and runfiles executable 
 RUN chmod 775 /usr/local/bin/model.R
