@@ -1,4 +1,4 @@
-# hello-world CTD^2^ Pancancer Drug Activity DREAM Challenge Docker Demo
+# hello-world CTD<sup>2</sup> Pancancer Drug Activity DREAM Challenge Docker Demo
 
 The purpose of this repository is to provide a template for creating a Docker image to submit your code for this challenge in a reproducible format. You can inspect the example docker image itself by logging into the Synapse docker repository (`docker login docker.synapse.org`) and pulling the image (`docker pull docker.synapse.org/syn20968331:example`). 
 
