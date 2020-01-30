@@ -25,3 +25,8 @@ There are three files in this repository that we will define in greater detail b
 ### Dockerfile 
 
 The [Dockerfile](https://github.com/allaway/ctd2-docker-demo/blob/master/Dockerfile) describes the Docker image that will be built by `docker build`. You can examine the Dockerfile for more details but there are a few basic steps: building off of a previous container (`FROM`), installing dependencies and making directories (`RUN`) and defining the entrypoint (`ENTRYPOINT`), that is, the script that will execute when we run the container. 
+
+
+## Building and pushing your container
+
+More details are available [here](https://www.synapse.org/#!Synapse:syn20968331/wiki/600782), but in brief, you'll want to build your container using `docker build -t docker.synapse.org/projectid:tag .` where the projectid is the Synapse project ID of your writeup project and the tag is your desired container tag. Then you can push to your Challenge writeup project using `docker push docker.synapse.org/projectid:tag`. 
